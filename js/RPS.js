@@ -13,6 +13,7 @@ document.getElementById('reset').onclick=reset;
 // var message;
 // var scoreboard;
 function pRock() {
+	console.log("hey");
   game('rock');
 }
 
