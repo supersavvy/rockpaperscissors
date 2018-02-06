@@ -1,5 +1,5 @@
 body {
-  font-family: Monospace;
+  font-family: courier;
   text-align: center;
 }
 
@@ -16,31 +16,15 @@ p {
   font-size: 20px;
 }
 
-/*Divs around entire game*/
-.gamebox {
-  border: 5px solid #000;
-}
-
-/*The clickable user icons*/
-.fa {
-  font-size: 6em;
-  cursor: pointer;
-  margin: 0.25em;
-}
-
-.computeranswer {
-  margin: 3em;
-}
-
 /*Scoreboard*/
 table {
-  border: 3px solid #000;
+  border: 2px solid #0000ff;
   margin: auto;
 }
 
 th {
   font-size: 2em;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
 td {
@@ -52,16 +36,16 @@ td, td {
 }
 
 button {
-  border: 2px solid #000;
+  border: 1px solid #0000ff;
   background: #fff;
   font-size: 1.5em;
-  font-family: Monospace;
+  font-family: courier;
   margin: 1em;
   cursor: pointer;
 }
 
 button:hover {
-  background: #000;
+  background: #ee82ee;
   color: #fff;
   border: 2px solid #000;
 }
