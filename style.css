@@ -1,5 +1,5 @@
 body {
-  font-family: courier;
+  font-family: Garamond;
   text-align: center;
 }
 
@@ -43,7 +43,7 @@ button {
   font-size: 1.5em;
   padding: 15px 32px;
   text-align: center;
-  font-family: courier;
+  font-family: Garamond;
   margin: 1em;
   cursor: pointer;
 }
