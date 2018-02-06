@@ -1,5 +1,5 @@
 body {
-  font-family: Garamond;
+  font-family: Palatino;
   text-align: center;
 }
 
@@ -43,7 +43,7 @@ button {
   font-size: 1.5em;
   padding: 15px 32px;
   text-align: center;
-  font-family: Garamond;
+  font-family: Palatino;
   margin: 1em;
   cursor: pointer;
 }
