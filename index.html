@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>Rock Paper Scissors</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" href = "style.css">
-      <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src = "js/RPS.js"> </script>
-   </head>
-   <body>
-      <nav class="navbar navbar-inverse">
-         <div class="container-fluid">
-            <div class="navbar-header">
-               <a class="navbar-brand" href="index.html">Rock, Paper, Scissors</a>
-            </div>
-            <ul class="nav navbar-nav">
-               <li class="active"><a href="index.html">The Game</a></li>
-            </ul>
-         </div>
-      </nav>
-      <div class="jumbotron text-center">
-         <h1>Rock, Paper, Scissors</h1>
-      </div>
-      <div class="container">
-      <div class="row">
-      <div class="col-sm-12 text-center">
-         <p>Let's Play!</p>
-      </div>
-      <div class = "button-row">
-         <button class = "rock btn">ROCK</button>
-         <button class = "paper btn">PAPER</button>
-         <button class = "scissors btn">SCISSORS</button>
-      </div>
-      <div class="col-sm-12 text-center">
-         <div id = "message">
-         </div>
-         <div class="col-sm-12 text-center">
-            <div id = "scoreboard">
-               <p class="scoreboard-row" id="playerWins">Wins: <span id="wins">0<span></p>
-               <p class="scoreboard-row" id="playerTies">Ties: <span id="ties">0<span></p>
-               <p class="scoreboard-row" id="playerLosses">Losses: <span id="losses">0<span></p>
-            </div>
-         </div>
-         <p id="reset">Reset</p>
-      </div>
-      <br>
-   </body>
-   <br><br>
+<head>
+  <title>Rock Paper Scissors</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href = "style.css">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src = "js/RPS.js"> </script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Rock, Paper, Scissors</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">The Game</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Rock, Paper, Scissors</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+  	<div class="col-sm-12 text-center">
+      <p>Let's Play!</p>
+    </div>
+    <div class = "row">
+      <button class = "rock btn">ROCK</button>
+      <button class = "paper btn">PAPER</button>
+      <button class = "scissors btn">SCISSORS</button>
+    </div>
+    <div class="col-sm-12 text-center">
+      <div id = "message">
+    </div>
+    <div class="col-sm-12 text-center">
+      <div id = "scoreboard">
+        <p class="scoreboard-row" id="playerWins">Wins: <span id="wins">0<span></p>
+        <p class="scoreboard-row" id="playerTies">Ties: <span id="ties">0<span></p>
+        <p class="scoreboard-row" id="playerLosses">Losses: <span id="losses">0<span></p>
+    </div>
+  </div>
+  <p id="reset">Reset</p>
+</div>
+<br>
+</body>
+
+<br><br>
+
 </html>
