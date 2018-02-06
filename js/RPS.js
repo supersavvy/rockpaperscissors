@@ -1,86 +1,109 @@
-$(document).ready(function() {
+//global variables 
+
+var playerScore = 0;
+var compScore = 0;
 
 
+document.getElementById('rock').onclick=pRock;
+document.getElementById('paper').onclick=pPaper;
+document.getElementById('scissors').onclick=pScissors;
+document.getElementById('reset').onclick=reset;
+// var ties = 0;
+// var pChoice;
+// var message;
+// var scoreboard;
+function pRock() {
+  game('rock');
+}
 
+function pPaper() {
+  game('paper');
+}
 
-var playerW = 0;
-var compW = 0;
-var ties = 0;
-var pChoice;
-var message;
-var scoreboard;
+function pScissors() {
+  game('scissors');
+}
 
-$('.rock').click(function() {
-	pChoice = 1;
+function compPlay() {
+	var compChoice;
 	var comp = Math.floor(Math.random() * 3 + 1);
-
-	if (comp == pChoice) {
-		message.html('').append("Tie! Computer chose rock.");
-		ties++;
-		$('#ties').html('').append(ties);
-	});
+	if (comp == 1) {
+		compChoice == 'rock';
+	}
 	else if (comp == 2) {
-		message.html('').append("You Lost! Computer chose paper.");
-		compW++;
-		$('#losses').html('').append(compW);
-	});
+		compChoice == 'paper';
+	}
 	else {
-		message.html('').append("You Won! Computer chose scissors.");
-		playerW++;
-		$('#wins').html('').append(playerW);
-	});
-});
+		compChoice == 'scissors';
+	}
+	return compChoice;
+}
 
-$('.paper').click(function() {
-	pChoice = 2;
-	var comp = Math.floor(Math.random() * 3 + 1);
+function game(playerChoice) {
+	var compChoice = compPlay();
+  //Outputs the user and comp choices after user selects a move
+  document.getElementById('pResult').innerHTML = 'You: ' + playerChoice;
+  document.getElementById('cResult').innerHTML = 'Computer: ' +  compChoice;
+   
+  //Three sets of nested if-else statements for when user picks rock, paper, or scissors
+  if (playerChoice == 'rock') {
+    if (compChoice == 'rock') {
+    document.getElementById('winner').innerHTML = "It's a tie!"; 
+    }
+    
+    else if (compChoice == 'paper') {
+      document.getElementById('winner').innerHTML = "Computer wins!"; 
+      compScore++;
+    }
+    
+    else if (compChoice == 'scissors') {
+      document.getElementById('winner').innerHTML = "You win!"; 
+      playerScore++;
+    }
+    
+  }
+  
+  else if (playerChoice == 'paper') {
+    if (compChoice == 'paper') {
+    document.getElementById('winner').innerHTML = "It's a tie!";   
+    }
+    
+    else if (compChoice == 'rock') {
+      document.getElementById('winner').innerHTML = "You win!"; 
+      playerScore++;
+    }
+    
+    else if (compChoice == 'scissors') {
+      document.getElementById('winner').innerHTML = "Computer wins!"; 
+      compScore++;
+    }
+  }
+  
+  else if (playerChoice == 'scissors') {
+    if (compChoice == 'scissors') { 
+    document.getElementById('winner').innerHTML = "It's a tie!"; 
+    }
+    
+    else if (compChoice == 'rock') {
+      document.getElementById('winner').innerHTML = "Computer wins!"; 
+      compScore++;
+    }
+    
+    else if (compChoice == 'paper') {
+      document.getElementById('winner').innerHTML = "You win!"; 
+      playerScore++;
+    }
+  }  
+  
+//Links the user and comp points in the HTML table to the global variables. This comes after the if-else statements, because we want the score to update only after the moves have been selected. 
+ document.getElementById('playerScore').innerHTML = playerScore;
+ document.getElementById('compScore').innerHTML = compScore;  
+  
+};
 
-	if (comp == pChoice) {
-		message.html('').append("Tie! Computer chose paper.");
-		ties++;
-		$('#ties').html('').append(ties);
-	});
-	else if (comp == 3) {
-		message.html('').append("You Lost! Computer chose scissors.");
-		compW++;
-		$('#losses').html('').append(compW);
-	});
-	else {
-		message.html('').append("You Won! Computer chose rock.");
-		playerW++;
-		$('#wins').html('').append(playerW);
-	});
-});
-
-$('.scissors').click(function() {
-	pChoice = 3;
-	var comp = Math.floor(Math.random() * 3 + 1);
-
-	if (comp == pChoice) {
-		message.html('').append("Tie! Computer chose scissors.");
-		ties++;
-		$('#ties').html('').append(ties);
-	});
-	else if (comp == 1) {
-		message.html('').append("You Lost! Computer chose rock.");
-		compW++;
-		$('#losses').html('').append(compW);
-	});
-	else {
-		message.html('').append("You Won! Computer chose paper.");
-		playerW++;
-		$('#wins').html('').append(playerW);
-	});
-});
-
-
-
-$('#reset').click(function() {
-  playerW = 0;
-  $('#wins').html(playerW);
-  ties = 0;
-  $('#ties').html(ties);
-  compW = 0;
-  $('#losses').html(compW);
-});
-});
+function reset() {
+ playerScore = 0;
+ compScore = 0;
+ document.getElementById('playerScore').innerHTML = playerScore;
+ document.getElementById('compScore').innerHTML = compScore;  
+};
