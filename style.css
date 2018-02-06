@@ -22,7 +22,7 @@ p {
 
 /*Scoreboard*/
 table {
-  border: 2px solid #0000ff;
+  border: 2px solid #ee82ee;
   margin: auto;
 }
 
@@ -30,7 +30,6 @@ th {
   font-size: 2em;
   border-bottom: 1px solid black;
   text-align: center;
-
 }
 
 td {
@@ -44,7 +43,7 @@ td, td {
 button {
   border: 2px solid #fff;
   background: #fff;
-  font-size: 1.5em;
+  font-size: 2em;
   padding: 15px 32px;
   text-align: center;
   font-family: Palatino;
