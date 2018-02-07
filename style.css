@@ -45,6 +45,7 @@ button {
   background: #fff;
   font-size: 2em;
   padding: 15px 32px;
+  display: inline-block;
   text-align: center;
   font-family: Palatino;
   margin: 1em;
