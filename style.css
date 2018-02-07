@@ -48,7 +48,7 @@ button {
   display: inline-block;
   text-align: center;
   font-family: Palatino;
-/*   margin: 1em; */
+  margin: 1em;
   cursor: pointer;
 }
 
