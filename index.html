@@ -11,33 +11,34 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript">
   window.onload = function() {
-    //global variables 
-
+    
+//global variables 
 var playerScore = 0;
 var compScore = 0;
 var ties = 0;
 
-
+//connects HTML buttons to JS functions
 document.getElementById('rock').onclick=pRock;
 document.getElementById('paper').onclick=pPaper;
 document.getElementById('scissors').onclick=pScissors;
 document.getElementById('reset').onclick=reset;
-// var ties = 0;
-// var pChoice;
-// var message;
-// var scoreboard;
+
+//sets player choice to rock when button pressed
 function pRock() {
   game('rock');
 }
 
+//sets player choice to paper when button pressed
 function pPaper() {
   game('paper');
 }
 
+//sets player choice to scissors when button pressed
 function pScissors() {
   game('scissors');
 }
 
+//sets computer choice based on random generator
 function compPlay() {
   var compChoice;
   var comp = Math.floor(Math.random() * 3 + 1);
@@ -53,9 +54,10 @@ function compPlay() {
   return compChoice;
 }
 
+//takes player choice and comp choice to actually play game
 function game(playerChoice) {
   var compChoice = compPlay();
-  //Outputs the user and comp choices after user selects a move
+  //Outputs player and comp choices after player selects a move
   document.getElementById('pResult').innerHTML = 'You: ' + playerChoice;
   document.getElementById('cResult').innerHTML = 'Computer: ' +  compChoice;
    
@@ -74,8 +76,7 @@ function game(playerChoice) {
     else if (compChoice == 'scissors') {
       document.getElementById('winner').innerHTML = "You win!"; 
       playerScore++;
-    }
-    
+    }    
   }
   
   else if (playerChoice == 'paper') {
@@ -112,13 +113,14 @@ function game(playerChoice) {
     }
   }  
   
-//Links the user and comp points in the HTML table to the global variables. This comes after the if-else statements, because we want the score to update only after the moves have been selected. 
+//Links the user and comp points in the HTML table to the global variables
  document.getElementById('playerScore').innerHTML = playerScore;
  document.getElementById('compScore').innerHTML = compScore; 
  document.getElementById('ties').innerHTML = ties;  
   
 };
 
+//resets global variables if reset button is pushed
 function reset() {
  playerScore = 0;
  compScore = 0;
@@ -131,7 +133,6 @@ function reset() {
   </script>
 
 </head>
-<!-- <script src="js/RPS.js"></script> -->
 <body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -153,13 +154,10 @@ function reset() {
   	<div class="col-sm-12 text-center">
       <h2>Let's Play!</h2>
     </div>
-<!--     <div class = "row"> -->
       <button id='rock'>~ROCK~</button>
       <button id='scissors'>~SCISSORS~</button>
       <button id='paper'>~PAPER~</button>    
-<!--     </div> -->
       <div class="computeranswer">
-<!--   <h3>What Happened: </h3> -->
     <p id="pResult"></p>
     <p id="cResult"></p>
     <p id="winner"></p>
@@ -181,5 +179,4 @@ function reset() {
     </tr>
   </table>
 </body>
-
 </html>
